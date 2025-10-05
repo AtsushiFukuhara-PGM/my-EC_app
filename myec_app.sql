@@ -20,7 +20,8 @@ SET time_zone = "+00:00";
 --
 -- データベース: `myec_app`
 --
-
+create database if not exists myec_app;
+use myec_app;
 -- --------------------------------------------------------
 
 --
