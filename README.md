@@ -98,28 +98,35 @@ bash
 myEC_app/
 ├─ index.html
 ├─ add_cart.php
-├─ get_cart.php
-├─ place_order.php
 ├─ contact_submit.php
-├─ load_ranking.php
+├─ delete_cart.php
+├─ get_cart.php
+├─ get_orders.php
+├─ get_product.php
+├─ get_products.php
+├─ get_ranking.php
+├─ purchase.php
+├─ update_cart.php
 ├─ /css/
-│   ├─ style.css
+│   ├─ cart.css
+│   ├─ common.css
 │   ├─ ranking.css
 │   ├─ home.css
 │   ├─ video.css
+│   ├─ products.css
+│   ├─ orders.css
 │   └─ contact.css
 ├─ /js/
 │   ├─ main.js
 │   ├─ products.js
 │   ├─ ranking.js
 │   ├─ contact.js
-│   └─ ...
+│   ├─ cart.js
+│   └─ orders.js
 ├─ /images/
-│   ├─ home-logo.png
-│   ├─ video_demo.mp4
-│   ├─ rank_1.png
-│   ├─ ...
+│   ├─ その他画像ファイル
 └─ myec_app.sql
+
 🧠 学んだこと
 ファイル分割の重要性
 CSS / JS / PHP の役割を明確に分けることで保守性が向上。
