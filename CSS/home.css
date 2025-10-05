@@ -1,0 +1,33 @@
+/* home.cssの記述 */
+
+/* ホームページ */
+.home-logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+.home-logo{
+    max-width: 800px;
+    width: 80%;
+    aspect-ratio: 1.8 / 1;
+    object-fit: cover;
+    filter: drop-shadow(0 4px 8px rgb(0, 0, 0,0.2));
+    display: block;
+    margin: 0 auto;
+}
+.home-welcome{
+    text-align: center;
+    font-family: 'M PLUS Rounded 1c',sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+.home-welcome h2{
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #ff7043;
+}
+.home-welcome p{
+    font-size: 24px;
+    margin: 4px 0;
+}

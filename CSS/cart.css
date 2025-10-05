@@ -1,0 +1,140 @@
+/* cart.cssの記述 */
+
+/* カートページ */
+#cart-container{
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    gap: 20px;
+    align-items: start;
+}
+
+/* 左側（カート内商品＋合計金額） */
+#cart-left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#cart-left h2{
+    margin:0;
+}
+
+/* カート内商品カード */
+.cart-item{
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 20px;
+}
+.cart-item img.p-image{
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 10px;
+    margin-top: 4px;
+}
+.p-name{
+    font-size: 30px;
+}
+.p-info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start;
+    margin-top: 4px;
+    margin: 0 10px;
+    font-size: 20px;
+}
+.qty-control{
+    display: flex;
+    align-items: center;
+    justify-items: flex-start;
+    gap: 8px;
+}
+.p-subtotal{
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+.qty-control button{
+    width: 28px;
+    height: 28px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #f9f9f9;
+    cursor: pointer;
+}
+.qty-control button:hover{
+    background: #eee;
+}
+.delete-btn{
+    font-weight: bold;
+    font-size: 20px;
+    align-self: flex-start;
+    margin-left: auto;
+    padding: 6px 12px;
+    background: #ff5144;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.delete-btn img.delete-icon{
+    width: 24px;
+    height: 24px;
+}
+.delete-btn:hover{
+    background: #d32f2f;
+}
+#purchase-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: #ffa41c;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 6px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: background 0.2s ease,transform 0.1s ease;
+}
+#purchase-btn:hover{
+    background: #e68900;
+    transform: translateY(-2px);
+}
+
+#purchase-btn:active{
+    transform: translateY(0);
+}
+#purchase-btn img.purchase-icon{
+    width: 32px;
+    height: 32px;
+}
+
+/* おすすめ商品カード */
+#cart-recommend h3{
+    margin-top: 0;
+}
+.rec-item{
+    text-align: center;
+    margin-bottom: 16px;
+}
+.rec-item img.r-image{
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}

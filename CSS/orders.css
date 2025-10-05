@@ -1,0 +1,24 @@
+/* orders.cssの記述 */
+
+.order-box{
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 16px;
+    background: #fafafa;
+}
+.order-item{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 6px 0;
+}
+.order-item img.item-img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.order-item span{
+    font-size: 14px;
+}

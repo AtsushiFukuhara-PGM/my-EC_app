@@ -1,0 +1,268 @@
+<!-- index.htmlの記述 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/common.css">
+    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="CSS/products.css">
+    <link rel="stylesheet" href="CSS/cart.css">
+    <link rel="stylesheet" href="CSS/orders.css">
+    <link rel="stylesheet" href="CSS/ranking.css">
+    <link rel="stylesheet" href="CSS/video.css">
+    <link rel="stylesheet" href="CSS/contact.css">
+    <title>My EC Site</title>
+</head>
+<body>
+    <header>
+        <h1 class="title-logo">My EC <span class="accent">S</span>hop</h1>
+        <div class="header-buttons">
+            <a href="#orders" class="order-btn">
+                <img src="images/order-log.png" alt="注文履歴">
+                注文履歴
+            </a>
+            <a href="#cart" class="cart-btn">
+                <img src="images/cart.png" alt="カート">
+                カート
+            </a>
+        </div>
+        
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">ホーム</a></li>
+            <li><a href="#products">商品一覧</a></li>
+            <li><a href="#ranking">人気商品ランキング</a></li>
+            <li><a href="#video">ビデオ</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!-- ホーム -->
+        <section id="page-home" class="page active">
+            <div class="home-logo-container">
+                <img src="images/home-logo.png" alt="サイトロゴ" class="home-logo">
+            </div>
+            <div class="home-welcome">
+                <h2>ようこそ。My EC Shopへ</h2>
+                <p>こだわりの商品を、シンプルな快適なショッピング体験と共にお届けします。</p>
+                <p>上のメニューから商品一覧や人気ランキングをご覧ください。</p>
+            </div>
+        </section>
+
+        <!-- 商品一覧 -->
+        <section id="page-products" class="page">
+            <h2>商品一覧</h2>
+            <div id="product-list" class="grid"></div>
+        </section>
+
+        <!-- 商品詳細ページ -->
+         <section id="page-product" class="page">
+            <h2>商品詳細</h2>
+            <div id="product-detail">
+                <!-- 左：商品画像 -->
+                <div class="image">
+                    <img id="p-image"src="" alt=""/>
+                </div>
+                <!-- 中央：商品情報 -->
+                <div class="info">
+                    <h3 id="p-name"></h3>
+                    <div class="review">★★★★☆ 4.1</div>
+                    <p id="p-price" class="price"></p>
+                    <p id="p-desc"></p>
+                </div>
+                <!-- 右：購入ボックス -->
+                <div class="buybox"> 
+                    <p id="p-price2" class="price"></p>
+                    <p>通常配送料無料</p>
+                    <p id="p-stock" style="color:green;"></p>
+                    <label>数量：
+                        <select id="p-qty">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </label>
+                    <button id="add-cart-btn">カートに入れる</button>
+               </div>
+            </div>
+        </section>
+
+        <!-- カートページ -->
+         <section id="page-cart" class="page">
+            <div id="cart-container">
+                <!-- 左：カート内商品 -->
+                <div id="cart-left">
+                    <h2>ショッピングカート</h2>
+                    <div id="cart-items">
+                        
+                    </div>
+                    <!-- 合計表示 -->
+                    <div id="cart-total"></div>
+                    <button id="purchase-btn">
+                        <img src="images/purchase.png" alt="購入" class="purchase-icon">
+                        購入
+                    </button>
+                </div>
+                
+                <!-- 右：おすすめ商品 -->
+                <div id="cart-recommend">
+                    <h3>おすすめ商品</h3>
+                </div>
+            </div>
+        </section>
+        <!-- 商品テンプレート -->
+        <template id="cart-item-template">
+            <div class="card cart-item">
+                <!-- 左：商品画像 -->
+                <img class="p-image" src="" alt="">
+                <!-- 中央：商品情報 -->
+                <div class="p-info">
+                    <h3 class="p-name"></h3>
+                    <p class="p-price"></p>
+                    
+
+                    <!-- 数量変更 -->
+                    <div class="qty-control">
+                        <button class="qty-minus">－</button>
+                        <span class="qty-value">1</span>
+                        <button class="qty-plus">＋</button>
+                    </div>
+
+                     <!-- 小計 -->
+                    <p class="p-subtotal"></p>
+                </div>
+
+                <!-- 右：削除ボタン -->
+                <button class="delete-btn">
+                <img src="images/delete.png" alt="削除" class="delete-icon">
+                削除
+                </button>
+            </div>
+        </template>
+        <template id="rec-item-template">
+            <div class="card rec-item">
+                <a href="#">
+                    <img class="r-image" src="" alt="">
+                    <h4 class="r-name"></h4>
+                    <p class="r-price"></p>
+                </a>
+            </div>
+        </template>
+
+        <!-- 注文履歴ページ -->
+        <section id="page-orders" class="page">
+            <h2>注文履歴</h2>
+            <div id="order-list"></div>
+        </section>
+        <!-- 注文ボックスのテンプレート -->
+        <template id="order-template">
+            <div class="order-box">
+                <h3 class="order-id"></h3>
+                <p class="order-date"></p>
+                <p class="order-total"></p>
+                <div class="order-items"></div>
+            </div>
+        </template>
+        <!-- 注文内の商品テンプレート -->
+         <template id="order-item-template">
+            <div class="order-item">
+                <img src="" alt="" class="item-img">
+                <span class="item-name"></span>
+                <span class="item-qty"></span>
+                <span class="item-price"></span>
+            </div>
+        </template>
+
+        <!-- 人気商品ランキング（売れ筋ランキング） -->
+        <section id="page-ranking" class="page">
+            <h2>人気商品ランキング</h2>
+            <div id="ranking-top1" class="ranking-grid one-col"></div>
+            <div id="ranking-top23" class="ranking-grid two-cols"></div>
+            <div id="ranking-rest" class="ranking-grid multi-cols"></div>
+        </section>
+
+        <!-- ランキングテンプレート -->
+         <template id="ranking-item-template">
+            <div class="card ranking-item">
+                <div class="rank-number"></div>
+                <a class="rank-link" href="#">
+                    <img class="rank-image" src="" alt="">
+                    <div class="rank-info">
+                        <h3 class="rank-name"></h3>
+                        <p class="rank-desc"></p>
+                        <p class="rank-price"></p>
+                        <p class="rank-sold"></p>
+                    </div>
+                </a>
+            </div>
+        </template>
+
+        <!-- プライムビデオもどき -->
+        <section id="page-video" class="page video">
+            <h2>DEMO VIDEO</h2>
+            <div class="video-hero">
+                <video autoplay muted loop playsinline>
+                    <source src="images/video_demo.mp4" type="video/mp4">
+                    お使いのブラウザは動画タグに対応していません。
+                </video>
+            </div>
+            <p>※後々本物のコンテンツに差し替え予定</p>
+        </section>
+
+        <!-- お問い合わせ -->
+        <section id="page-contact" class="page">
+            <h2>お問い合わせ</h2>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="お名前" required/>
+                <input type="email" name="email" placeholder="メールアドレス" required/>
+                <textarea name="message" placeholder="お問い合わせ内容" rows="4" required></textarea>
+                <button type="submit">送信</button>
+            </form>
+            <h3>FAQ（よくある質問）</h3>
+            <div class="faq-list">
+                <details>
+                    <summary>Q.なぜこのサイトを作ったのですか？</summary>
+                    <p>A.プログラミングの学習と、ポートフォリオとしての実績づくりのためです。</p>
+                </details>
+                <details>
+                    <summary>Q.使っている言語は？</summary>
+                    <p>A.フロントエンドはHTML、CSS、JavaScript（バニラ）で、バックエンドはMySQLとPHPです。</p>
+                </details>
+                <details>
+                    <summary>Q.使っているフレームワークは？</summary>
+                    <p>A.フレームワークは使用していません。基礎的な実装力を示すため、ルーティングやテンプレート展開もすべて自作しています。</p>
+                </details>
+                <details>
+                    <summary>Q.今後実装したい機能は？</summary>
+                    <p>A.最初に実装したいのはユーザーログイン機能です。
+                    その後、レビュー投稿や管理者画面なども追加したいと考えています。</p>
+                </details>
+                <details>
+                    <summary>Q.このポートフォリオ作成を通して学んだことは？</summary>
+                    <p>A.CSS、JavaScript、PHPのファイル分割の重要性です。<br>
+                        　ファイルを整理しておくことで、記述の場所を追いやすくなり、
+                        結果として修正や拡張がスムーズになります。</p>
+                </details>
+            </div>
+        </section>
+
+        
+    </main>
+
+    <!-- JSファイル呼び出し -->
+    <script src="JS/main.js"></script>
+    <script src="JS/products.js"></script>
+    <script src="JS/cart.js"></script>
+    <script src="JS/orders.js"></script>
+    <script src="JS/video.js"></script>
+    <script src="JS/ranking.js"></script>
+    <script src="JS/contact.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,94 @@
+/* ranking.css */
+
+.ranking-grid{
+    display: grid;
+    gap: 24px;
+    margin-bottom: 32px
+}
+.ranking-grid.one-col{
+    grid-template-columns: 1fr;
+}
+.ranking-grid.two-cols{
+    grid-template-columns: repeat(2,1fr);
+}
+.ranking-grid.multi-cols{
+    grid-template-columns: repeat(3,1fr);
+}
+.ranking-item{
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    background: #fafafa;
+    align-items: center;
+    gap: 12px;
+    transition: transform 0.2s;
+}
+.ranking-item:hover{
+    transform: translateY(-2px);
+}
+#ranking-top1 .ranking-item{
+    justify-content: center;
+    text-align: center;
+}
+#ranking-top1 .rank-link{
+    justify-content: center;
+}
+/* 左の順位アイコン */
+.rank-number{
+    flex-shrink: 0;
+    text-align: center;
+    font-size: 20px;
+}
+.rank-icon{
+    width: 100px;
+    height: auto;
+}
+#ranking-top1 .rank-icon{
+    width: 140px;
+}
+
+/* 商品部分を横並びに */
+.rank-link{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+/* 商品画像 */
+.rank-image{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+#ranking-top1 .rank-image{
+    width: 300px;
+    height: 200px;
+}
+#ranking-top23 .rank-image{
+    width: 200px;
+    height: 120px;
+}
+/* 情報部分 */
+.rank-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+.rank-name{
+    font-size: 20px;
+    margin: 0 0 8px;
+}
+.rank-price{
+    color: #d32f2f;
+    font-weight: bold;
+    font-size: 20px;
+}
+.rank-sold{
+    color: #666;
+    font-size: 18px;
+}
