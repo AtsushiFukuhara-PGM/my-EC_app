@@ -178,4 +178,8 @@ myEC_app/
 
 ![contact](images/my-ec_contact.png)
 
+---
+
 > 📘 本プロジェクトは、フレームワークに依存せず「Webの基礎力」を示すために制作されました。
+
+---
