@@ -93,6 +93,21 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+-- テーブルのデータのダンプ `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `description`, `price`, `stock`, `image_url`) VALUES
+(1, 'ノートPC', '軽量で高速なモデル', 120000.00, 2, 'images/laptop.jpg'),
+(2, 'マウス', '高精度センサー搭載', 4800.00, 6, 'images/mouse.jpg'),
+(3, 'ディスプレイ', '27インチ・フルHD', 22000.00, 3, 'images/display.png'),
+(4, 'キーボード', '静音タイプ・日本語配列', 6500.00, 9, 'images/keyboard.jpg'),
+(5, 'USBハブ', '4ポートUSB3.0対応', 2500.00, 14, 'images/usb_hub.png\r\n'),
+(6, 'マウスパッド', '滑りやすい布製', 1200.00, 17, 'images/mousepad.png'),
+(7, 'スピーカー', 'ステレオ小型スピーカー', 7800.00, 4, 'images/speaker.jpg'),
+(8, 'オーディオインターフェース', '高音質録音対応', 19800.00, 0, 'images/audio_interface.jpg'),
+(9, '65W電源アダプタ', 'ノートPC用充電器', 3500.00, 10, 'images/power_adapter.jpg');
+
+--
 -- ダンプしたテーブルのインデックス
 --
 
